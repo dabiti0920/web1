@@ -6,10 +6,10 @@
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '{your-app-id}',
+      appId      : '{652048312189225}',
       cookie     : true,
       xfbml      : true,
-      version    : '{api-version}'
+      version    : '{7.0}'
     });
 
     FB.AppEvents.logPageView();
@@ -26,11 +26,9 @@
 </script>
   </head>
   <body>
-
-function checkLoginState() {
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-}
+    <fb:login-button
+      scope="public_profile,email"
+      onlogin="checkLoginState();">
+    </fb:login-button>
   </body>
 </html>
